@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XGuidGenerator"
+             xmlns:ViewModels="clr-namespace:XGuidGenerator.ViewModels"
+             xmlns:Converters="clr-namespace:XGuidGenerator.Converters"
+             x:Class="XGuidGenerator.MainPage">
+    
+    <ContentPage.BindingContext>
+        <ViewModels:MainPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <Converters:GuidToStringConverter x:Key="GuidToStringConverter"/>
+    </ContentPage.Resources>
+    
+    <StackLayout VerticalOptions="Center">
+        <Label Text="{Binding Guid, Converter={StaticResource GuidToStringConverter}}" HorizontalOptions="Center"/>
+        <Button Command="{Binding GenerateGuid}" Text="Generate and copy" HorizontalOptions="Center"/>
+    </StackLayout>
+
+</ContentPage>
