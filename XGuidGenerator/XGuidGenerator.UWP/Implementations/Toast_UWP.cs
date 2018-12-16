@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Data.Xml.Dom;
+﻿using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 using XGuidGenerator.Interfaces;
 using XGuidGenerator.UWP.Implementations;
 
-[assembly: Xamarin.Forms.Dependency(typeof(Toast))]
+[assembly: Xamarin.Forms.Dependency(typeof(Toast_UWP))]
 namespace XGuidGenerator.UWP.Implementations
 {
-    class Toast : IToast
+    class Toast_UWP : IToast
     {
         public void Show(string message)
         {
