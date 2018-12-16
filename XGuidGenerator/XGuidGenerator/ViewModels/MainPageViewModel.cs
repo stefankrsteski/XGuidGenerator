@@ -32,7 +32,6 @@ namespace XGuidGenerator.ViewModels
         public ICommand GenerateGuid => new Command(async ()=>
         {
             Guid = Guid.NewGuid();
-            //DependencyService.Get<IClipboard>().CopyToClipboard(Guid.ToString());
             await Clipboard.SetTextAsync(Guid.ToString());
             DependencyService.Get<IToast>().Show($"{Guid.ToString()} is copied to clipboard!");
         });
