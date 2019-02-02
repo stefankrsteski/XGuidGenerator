@@ -148,9 +148,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XGuidGenerator\XGuidGenerator.csproj">
-      <Project>{436529FC-E5C3-4C21-9664-93568660E9E4}</Project>
-      <Name>XGuidGenerator</Name>
+    <ProjectReference Include="..\XGuidGenerator.Core\XGuidGenerator.Core.csproj">
+      <Project>{8e901f01-4eb5-4c89-84b6-6bf4969b8685}</Project>
+      <Name>XGuidGenerator.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
